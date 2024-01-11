@@ -1,0 +1,98 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: #d9edbf;
+}
+
+main {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 15px;
+
+   h1 {
+      text-transform: capitalize;
+      text-align: center;
+      font-size: 45px;
+      padding: 20px 15px 10px;
+   }
+
+   .game {
+      width: 60vmin;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+
+      .box {
+         width: 18vmin;
+         height: 18vmin;
+         border-radius: 10px;
+         border: none;
+         background: #fdffab;
+         color: #ffcf81;
+         font-size: 12vmin;
+         display: flex;
+         align-items: start;
+         justify-content: center;
+         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+      }
+   }
+
+   .reset-btn {
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-transform: capitalize;
+      background: #ffb996;
+      color: #000;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      margin: 10px 15px 15px;
+      transition: 0.5s;
+
+      &:hover {
+         cursor: pointer;
+         transform: translateX(5px);
+      }
+   }
+
+   .win-msg-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      h2 {
+         margin-block: 10px 0;
+         font-size: 25px;
+         text-align: center;
+         text-transform: capitalize;
+      }
+
+      .play-again {
+         @extend .reset-btn;
+         margin-block: 15px;
+      }
+   }
+}
+
+.hide {
+   display: none !important;
+}
+
+@media (max-width: 400px) {
+   main{
+      h1{
+         font-size: 30px;
+      }
+   }
+}
