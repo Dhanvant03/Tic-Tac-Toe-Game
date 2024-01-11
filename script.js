@@ -99,6 +99,7 @@ function checkWinner() {
                boxs[pattern[2]].style.background = "#ffb996";
             }, 600);
 
+            disableBoxs();
             return true;
          }
       }
